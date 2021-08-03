@@ -94,14 +94,14 @@
 
       var booksOptions = {
         condoLiving: {
-          pdf: 'books/pdf/CondoLiving.pdf',
+          pdf: 'https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_500_kB.pdf',
           downloadURL: 'books/pdf/CondoLiving.pdf',
           template: template
         },
         theThreeMusketeers: {
-          pdf: 'https://students.iusb.edu/academic-success-programs/academic-centers-for-excellence/docs/Basic%20Math%20Review%20Card.pdf',
+          pdf: 'https://file-examples-com.github.io/uploads/2017/10/file-sample_150kB.pdf',
           propertiesCallback: function(props) {
-            props.page.depth /= 3;
+            props.page.depth /= 1;
             props.cover.padding = 0.002;
             props.cover.binderTexture = 'books/pdf/binder/TheThreeMusketeers.jpg';
             return props;
