@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.550/pdf.min.js"></script>
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.1/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.1/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.2/prop-types.min.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+
+   
+<style>
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 7.5%;
+    }
+
+    .carousel-control-prev .carousel-control-prev-icon,
+    .carousel-control-next .carousel-control-next-icon {
+        outline: black;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .carousel-control-prev .fa-chevron-left,
+    .carousel-control-next .fa-chevron-right {
+        color: black;
+    }
+
+    .carousel-caption {
+      color: black;
+    }
+
+</style>
+
+</head>
+
+<body>
+<div id="like_button_container"></div>
+<div id="main"></div>
+
+    
+</main>
+  <!-- ... other HTML ... -->
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="reactpdf.js"></script>
+
+
+    <script>
+        'use strict';
+
+        const e = React.createElement;
+
+        class LikeButton extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = { liked: false };
+          }
+
+          render() {
+            if (this.state.liked) {
+              return 'You liked this.';
+            }
+
+            return e(
+              'button',
+              { onClick: () => this.setState({ liked: true }) },
+              'Like'
+            );
+          }
+        }
+        const domContainer = document.querySelector('#like_button_container');
+        ReactDOM.render(e(LikeButton), domContainer);
+    </script>
+    <script>
+       
+    </script>
+</body>
+
+</html>

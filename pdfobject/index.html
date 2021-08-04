@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        /*background: url('images/patterns/retina_wood2.png');*/
+    }
+    .books{
+        /*margin: 50px;*/
+    }
+    .books img{
+        box-shadow: 0 3px 10px rgba(0,0,0,.5);
+        height: 200px;
+    }
+    .book, .book2, .book3{
+        margin: 10px;
+    }
+
+    div[aria-label="Pop-out"] {
+        display: none;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <div class="books" id="book">
+    </div>
+
+    <script type="text/javascript" src="pdfobject.js"></script>
+    <script>
+        const options = {
+            forceIframe: true,
+            forcePDFJS: true,
+            page: 4,
+            pdfOpenParams: { page: '' }
+        };
+        PDFObject.embed("https://file-examples-com.github.io/uploads/2017/10/file-sample_150kB.pdf", '', options);
+    </script>
+
+</body>
+
+</html>
