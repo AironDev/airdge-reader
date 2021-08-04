@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from plumtheory.com/demos/document-library/modal-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 02:24:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="document-library/css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="document-library/libs/yepnope.1.5.3-min.js"></script>
+    <script type="text/javascript" src="document-library/ttw-document-library.min.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+
+
+
+
+            var documentList =  [
+                {
+                    "path": "sample-files/compressed.tracemonkey-pldi-09.pdf"
+                },
+                {
+                    "path": "sample-files/sintel_trailer-720p.mp4"
+                },
+                {
+                    "path": "sample-files/Finding_the_Balance.mp3"
+                },
+                {
+                    "path": "sample-files/1.jpg"
+                },
+                {
+                    "path": "sample-files/two-cities.txt"
+                },
+                {
+                    "path": "sample-files/zippy.zip"
+                }
+            ];
+
+
+
+            var library = new DocumentLibrary({
+                $anchor: $('#container'),
+                openInModal:true,
+                openItemWidth:function(doc){
+                    return doc.$anchor.width() * .4
+                }
+            });
+
+            library.load(documentList);
+
+        });
+
+    </script>
+</head>
+<body>
+
+<div id="container"></div>
+<div id="container-two"></div>
+</body>
+
+<!-- Mirrored from plumtheory.com/demos/document-library/modal-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Aug 2021 02:24:01 GMT -->
+</html>
