@@ -38,36 +38,39 @@
     })
 </script>
 <style type="text/css">
-    .flipbook-carousel-page{
+
+    @media (min-width:1025px) { 
+        /* big landscape tablets, laptops, and desktops */ 
+        .flipbook-carousel-page{
         width: 3000px !important
-    }
-    .flipbook-carousel-page-bg {
-        width: 3000px
-    }
-    .flipbook-carousel-page-inner{
-        width: 3000px;
-        height: 4000px;
+        }
+        .flipbook-carousel-page-bg {
+            width: 3000px
+        }
+        .flipbook-carousel-page-inner{
+            width: 3000px;
+            height: 4000px;
 
-    }
-    .flipbook-carousel-page{
-        width: 3000px
+        }
+        .flipbook-carousel-page{
+            width: 3000px
+        }
+
+        .flipbook-textLayer {
+            width: 3000px
+        }
+
+        .flipbook-carousel-slide .slide-inner {
+            width: 3000px !important;
+            transform: translate(220.142px, 7.21919px) scale(0.302905) translateZ(0px);
+            width: 1580.99px
+        }
+
+        .flipbook-carousel-slide {
+            overflow: scroll;
+        }
     }
 
-    .flipbook-textLayer {
-        width: 3000px
-    }
-
-    .flipbook-carousel-slide .slide-inner {
-        /* height: 100%; */
-        /* box-shadow: 10px 10px 50px rgb(50 50 50); */
-        width: 3000px !important;
-        transform: translate(220.142px, 7.21919px) scale(0.302905) translateZ(0px);
-        width: 1580.99px
-    }
-
-    .flipbook-carousel-slide {
-        overflow: scroll;
-    }
 
 </style>
 </head>
