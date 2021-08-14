@@ -15,6 +15,12 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
+
+        var pages = []
+        pages[0] = {
+            htmlContent:'<p>Some text</p><div style="position:absolute;top:100px;left:200px;">div with custom css</div>'
+        }
+        
         $("#container").flipBook({
             // pages:[
             //     {src:"../images/book2/page1.jpg", thumb:"../images/book2/thumb1.jpg", title:"Cover"},
@@ -26,6 +32,7 @@
             //     {src:"../images/book2/page7.jpg", thumb:"../images/book2/thumb7.jpg", title:"Page seven"},
             //     {src:"../images/book2/page8.jpg", thumb:"../images/book2/thumb8.jpg", title:"Last"}
             // ],
+
             pdfUrl:'https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_1MB.pdf',
             viewMode:"swipe",
 			singlePageMode:true,
