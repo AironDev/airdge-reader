@@ -20,7 +20,7 @@
         pages[0] = {
             htmlContent:'<p>Some text</p><div style="position:absolute;top:100px;left:200px;">div with custom css</div>'
         }
-        
+
         $("#container").flipBook({
             // pages:[
             //     {src:"../images/book2/page1.jpg", thumb:"../images/book2/thumb1.jpg", title:"Cover"},
@@ -37,6 +37,7 @@
             viewMode:"swipe",
 			singlePageMode:true,
             // zoomMin:1.0,
+            pages:pages,
             layout: 1,
             // backgroundTransparent : true,
             lightBoxFullscreen  : true,
