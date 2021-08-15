@@ -3469,7 +3469,7 @@ var FLIPBOOK = FLIPBOOK || {};
                         this.prevPage()
                         break;
                     case 'btnNext':
-                        this.nextPage()
+                        // this.nextPage()
                         break;
                     case 'btnLast':
                         this.lastPage()
