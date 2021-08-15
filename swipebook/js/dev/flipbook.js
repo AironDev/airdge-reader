@@ -2624,8 +2624,6 @@ var FLIPBOOK = FLIPBOOK || {};
 
                 
                 self.Book.updateVisiblePages()
-                // zoom page on load
-                // airon changed from zoomMin
                 self.Book.zoomTo(o.zoomMin)
 
                 this.updateCurrentPage();
@@ -2655,7 +2653,6 @@ var FLIPBOOK = FLIPBOOK || {};
                             self.zoom > 1 ? self.moveBook('up') : self.nextPage();
                             break;
                         case 39:
-
                             self.zoom > 1 ? self.moveBook('right') : self.nextPage();
                             break;
                         case 33:
@@ -2986,7 +2983,7 @@ var FLIPBOOK = FLIPBOOK || {};
 
                 });
 
-                this.swipeEnabled = false
+                this.swipeEnabled = true
 
             },
 
@@ -3856,7 +3853,7 @@ var FLIPBOOK = FLIPBOOK || {};
             },
 
             nextPage:function(){
-                // AIRON control next button here
+
                 if(this.Book) this.Book.nextPage()
 
             },
@@ -4369,9 +4366,9 @@ var FLIPBOOK = FLIPBOOK || {};
             pdfResize: function() {
                 var self = this
                 
-                
-                    this.pdfDocument.getPage(1).then(function(page) {
-                    self.viewportOriginal = page.getViewport(1.7);
+                /*
+                    //this.pdfDocument.getPage(1).then(function(page) {
+                    //self.viewportOriginal = page.getViewport(1);
                 var bh = self.bookLayer.height()
                 scale = bh / self.viewportOriginal.height
                 scale *= self.zoom
@@ -4392,9 +4389,9 @@ var FLIPBOOK = FLIPBOOK || {};
                 scale = findClosestInArray(scale, self.options.pdf.supportedScales)
 
 
-                if (self.Book && self.options.pdf.currentScale != scale)
+                if (self.Book && self.options.pdf.currentScale != scale)*/
                 self.Book.onZoom();
-                });
+                //});
 
 
             },
