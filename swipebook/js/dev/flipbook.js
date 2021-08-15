@@ -392,7 +392,7 @@ var FLIPBOOK = FLIPBOOK || {};
                 annotationLayer: false,
             },
 
-            pageTextureSize: 2048, 
+            pageTextureSize: 5048, 
             pageTextureSizeSmall: 1500,
 
             pageTextureSizeMobile: null,
