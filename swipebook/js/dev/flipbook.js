@@ -2102,8 +2102,9 @@ var FLIPBOOK = FLIPBOOK || {};
             loadPageFromPdf: function(pageIndex, size, callback) {
 
                 var self = this;
+                console.log(pageIndex)
                 
-                size = 90000
+                size = size || this.options.pageTextureSize
 
                 if (!self.options.pages[pageIndex]) {
                     callback.call(self)
