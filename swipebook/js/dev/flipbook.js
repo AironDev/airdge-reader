@@ -3854,7 +3854,7 @@ var FLIPBOOK = FLIPBOOK || {};
 
             nextPage:function(){
 
-                if(this.Book) this.Book.nextPage()
+                // if(this.Book) this.Book.nextPage()
 
             },
 
