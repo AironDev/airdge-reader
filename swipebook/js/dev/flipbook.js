@@ -2625,7 +2625,7 @@ var FLIPBOOK = FLIPBOOK || {};
                 
                 self.Book.updateVisiblePages()
                 // airon changed from zoomMin
-                self.Book.zoomTo(o.zoomMax)
+                self.Book.zoomTo(o.zoomMin)
 
                 this.updateCurrentPage();
 
@@ -2985,7 +2985,7 @@ var FLIPBOOK = FLIPBOOK || {};
 
                 });
 
-                this.swipeEnabled = true
+                this.swipeEnabled = false
 
             },
 
