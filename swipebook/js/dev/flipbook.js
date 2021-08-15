@@ -392,7 +392,7 @@ var FLIPBOOK = FLIPBOOK || {};
                 annotationLayer: false,
             },
 
-            pageTextureSize: 5048, 
+            pageTextureSize: 2048, 
             pageTextureSizeSmall: 1500,
 
             pageTextureSizeMobile: null,
@@ -2103,7 +2103,7 @@ var FLIPBOOK = FLIPBOOK || {};
 
                 var self = this;
                 
-                size = 4000 || this.options.pageTextureSize
+                size = 90000
 
                 if (!self.options.pages[pageIndex]) {
                     callback.call(self)
