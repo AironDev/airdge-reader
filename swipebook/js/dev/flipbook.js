@@ -4371,7 +4371,7 @@ var FLIPBOOK = FLIPBOOK || {};
                 
                 
                     this.pdfDocument.getPage(1).then(function(page) {
-                    self.viewportOriginal = page.getViewport(1);
+                    self.viewportOriginal = page.getViewport(1.7);
                 var bh = self.bookLayer.height()
                 scale = bh / self.viewportOriginal.height
                 scale *= self.zoom
