@@ -402,7 +402,7 @@ var FLIPBOOK = FLIPBOOK || {};
             viewMode: 'webgl',
             singlePageMode: false,
             singlePageModeIfMobile: false,
-            zoomMin: .95,
+            zoomMin: .99,
             zoomMax2: null,
 
             zoomSize: null,
@@ -4365,8 +4365,6 @@ var FLIPBOOK = FLIPBOOK || {};
 
             pdfResize: function() {
                 var self = this
-                 // this.pdfDocument.getPage(1).then(function(page) {
-                self.viewportOriginal = page.getViewport(1.9);
                 
                 /*
                     //this.pdfDocument.getPage(1).then(function(page) {
