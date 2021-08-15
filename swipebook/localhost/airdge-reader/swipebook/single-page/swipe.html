@@ -33,7 +33,7 @@
 
             // use html ifrma content
             pages[i] = {
-                htmlContent: '<div class="preview-notice-wrapper" ><div class="preview-notice"><h1>You have reached the preview limit for this document</h1><h3>Please subsscribe to read/download complete document</h3><a href="/dsf">See Pricing</a></div></div>'
+                htmlContent: '<div class="preview-notice-wrapper" ><div class="preview-notice"><h1>You have reached the preview limit for this document</h1></div><div>Please subsscribe to read/download complete document </div><a href="/df">See Pricing</a></div>'
             }
         }
         
@@ -49,7 +49,7 @@
             //     {src:"../images/book2/page8.jpg", thumb:"../images/book2/thumb8.jpg", title:"Last"}
             // ],
 
-            pdfUrl:'../pdf/sample.pdf',
+            pdfUrl:'https://file-examples-com.github.io/uploads/2017/10/file-example_PDF_1MB.pdf',
             viewMode:"swipe",
 			singlePageMode:true,
             // zoomSize:1,
@@ -94,34 +94,15 @@
         }
     }
 
-    .flipbook-textLayer {
-       z-index: -100
-    }
-
-    .preview-notice-wrapper{
-       width: 50%;
-        min-height: calc(100vh); 
+    .preview-notice-wrapp
+       z-index: 1000;
+        min-height: calc(100vh);
         border: none;
-        margin-top: 100px
+        display: flex;
     }
 
     .preview-notice {
         margin: auto;
-    }
-
-    .preview-notice h1{
-        font-size: 50px
-    }
-
-    .preview-notice a {
-       padding: 40px;
-    }
-
-    .flipbook-page-htmlContent {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform-origin: 0 0;
     }
 
 </style>
