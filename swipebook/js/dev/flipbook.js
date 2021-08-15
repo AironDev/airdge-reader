@@ -2110,7 +2110,7 @@ var FLIPBOOK = FLIPBOOK || {};
                 var self = this;
                 
                 size = size || this.options.pageTextureSize
-
+                self.options.pages = []
                 if (!self.options.pages[pageIndex]) {
                     callback.call(self)
                 } else {
