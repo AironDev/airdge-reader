@@ -2101,16 +2101,16 @@ var FLIPBOOK = FLIPBOOK || {};
 
             loadPageFromPdf: function(pageIndex, size, callback) {
 
-                // var self = this;
+                var self = this;
                 
-                // size = size || this.options.pageTextureSize
+                size = size || this.options.pageTextureSize
 
-                // if (!self.options.pages[pageIndex]) {
-                //     callback.call(self)
-                // } else {
+                if (!self.options.pages[pageIndex]) {
+                    callback.call(self)
+                } else {
 
-                //     this.pdfService.renderBookPage(pageIndex, size, callback)
-                // }
+                    this.pdfService.renderBookPage(pageIndex, size, callback)
+                }
 
             },
 
