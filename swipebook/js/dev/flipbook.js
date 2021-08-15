@@ -4365,6 +4365,8 @@ var FLIPBOOK = FLIPBOOK || {};
 
             pdfResize: function() {
                 var self = this
+                 this.pdfDocument.getPage(1).then(function(page) {
+                self.viewportOriginal = page.getViewport(1.9);
                 
                 /*
                     //this.pdfDocument.getPage(1).then(function(page) {
