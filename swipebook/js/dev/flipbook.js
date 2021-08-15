@@ -3469,7 +3469,7 @@ var FLIPBOOK = FLIPBOOK || {};
                         this.prevPage()
                         break;
                     case 'btnNext':
-                        // this.nextPage()
+                        this.nextPage()
                         break;
                     case 'btnLast':
                         this.lastPage()
@@ -3713,7 +3713,7 @@ var FLIPBOOK = FLIPBOOK || {};
                     .bind('touchend click', function(e) {
                         e.stopPropagation();
                         e.preventDefault();
-                        self.nextPage();
+                        // self.nextPage();
                     });
 
 
