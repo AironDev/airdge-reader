@@ -4369,9 +4369,9 @@ var FLIPBOOK = FLIPBOOK || {};
             pdfResize: function() {
                 var self = this
                 
-                /*
-                    //this.pdfDocument.getPage(1).then(function(page) {
-                    //self.viewportOriginal = page.getViewport(1);
+                
+                    this.pdfDocument.getPage(1).then(function(page) {
+                    self.viewportOriginal = page.getViewport(1);
                 var bh = self.bookLayer.height()
                 scale = bh / self.viewportOriginal.height
                 scale *= self.zoom
@@ -4392,9 +4392,9 @@ var FLIPBOOK = FLIPBOOK || {};
                 scale = findClosestInArray(scale, self.options.pdf.supportedScales)
 
 
-                if (self.Book && self.options.pdf.currentScale != scale)*/
+                if (self.Book && self.options.pdf.currentScale != scale)
                 self.Book.onZoom();
-                //});
+                });
 
 
             },
