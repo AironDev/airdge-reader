@@ -2041,13 +2041,11 @@ var FLIPBOOK = FLIPBOOK || {};
 
                 if (this.options.pdfMode && !pageSrc) {
 
+                    // airon  display blank pages after previw limit
                     if(index > 5){
                         return;
                     }
                     this.loadPageFromPdf(index, size, callback)
-                    // console.log(index)
-                    //  console.log(size)
-                    //   console.log(callback)
 
                 } else {
 
@@ -2110,7 +2108,7 @@ var FLIPBOOK = FLIPBOOK || {};
                 var self = this;
                 
                 size = size || this.options.pageTextureSize
-                self.options.pages = []
+
                 if (!self.options.pages[pageIndex]) {
                     callback.call(self)
                 } else {
@@ -2125,8 +2123,8 @@ var FLIPBOOK = FLIPBOOK || {};
             },
 
             mark: function(str, redraw) {
-                        
-                if(str != this.markedStr || redraw){
+                // airon removed extra character after ||
+                if(str != this.markedStr || redraw){
                     this.markedStr = str
                     this.options.pages.forEach(function(page){
                         var $htmlContent = jQuery(page.htmlContent)
