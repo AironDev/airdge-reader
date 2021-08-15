@@ -2041,7 +2041,7 @@ var FLIPBOOK = FLIPBOOK || {};
 
                 if (this.options.pdfMode && !pageSrc) {
 
-                    this.loadPageFromPdf(index, size, callback)
+                    // this.loadPageFromPdf(index, size, callback)
 
                 } else {
 
@@ -2101,17 +2101,16 @@ var FLIPBOOK = FLIPBOOK || {};
 
             loadPageFromPdf: function(pageIndex, size, callback) {
 
-                var self = this;
-                console.log(pageIndex)
+                // var self = this;
                 
-                size = size || this.options.pageTextureSize
+                // size = size || this.options.pageTextureSize
 
-                if (!self.options.pages[pageIndex]) {
-                    callback.call(self)
-                } else {
+                // if (!self.options.pages[pageIndex]) {
+                //     callback.call(self)
+                // } else {
 
-                    this.pdfService.renderBookPage(pageIndex, size, callback)
-                }
+                //     this.pdfService.renderBookPage(pageIndex, size, callback)
+                // }
 
             },
 
