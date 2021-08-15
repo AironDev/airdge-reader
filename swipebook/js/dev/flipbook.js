@@ -2653,7 +2653,8 @@ var FLIPBOOK = FLIPBOOK || {};
                             self.zoom > 1 ? self.moveBook('up') : self.nextPage();
                             break;
                         case 39:
-                            self.zoom > 1 ? self.moveBook('right') : self.nextPage();
+                            
+                            // self.zoom > 1 ? self.moveBook('right') : self.nextPage();
                             break;
                         case 33:
                             self.prevPage()
@@ -3713,7 +3714,7 @@ var FLIPBOOK = FLIPBOOK || {};
                     .bind('touchend click', function(e) {
                         e.stopPropagation();
                         e.preventDefault();
-                        // self.nextPage();
+                        self.nextPage();
                     });
 
 
@@ -3853,8 +3854,8 @@ var FLIPBOOK = FLIPBOOK || {};
             },
 
             nextPage:function(){
-
-                // if(this.Book) this.Book.nextPage()
+                // AIRON control next button here
+                if(this.Book) this.Book.nextPage()
 
             },
 
