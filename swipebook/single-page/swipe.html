@@ -18,9 +18,20 @@
 
         var pages = []
         pages[0] = {
-            htmlContent:'<p>Some text</p><div class="coverhtml" style="position:absolute;top:100px;left:200px; width: 100%; height: 100%; background: black">div with custom css</div>'
+            htmlContent:''
         }
 
+        // set preview images for pages beyond the preview limit
+        for (var i = 5; i <= 1000; i++) {
+            // use image
+            // pages[i] = {src:"../images/book2/page6.jpg", thumb:"../images/book2/thumb6.jpg", title:"Page six"}
+
+            // use html content
+            pages[i] = {
+                htmlContent: '<div style="background:black width: 100%; min-height: calc(100vh); border: none;" scrolling="no" seamless="seamless" frameborder="0"></div>'
+            }
+        }
+        
         $("#container").flipBook({
             // pages:[
             //     {src:"../images/book2/page1.jpg", thumb:"../images/book2/thumb1.jpg", title:"Cover"},
