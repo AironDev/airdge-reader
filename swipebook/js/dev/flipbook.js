@@ -402,7 +402,7 @@ var FLIPBOOK = FLIPBOOK || {};
             viewMode: 'webgl',
             singlePageMode: false,
             singlePageModeIfMobile: false,
-            zoomMin: .99,
+            zoomMin: .95,
             zoomMax2: null,
 
             zoomSize: null,
@@ -2103,7 +2103,7 @@ var FLIPBOOK = FLIPBOOK || {};
 
                 var self = this;
                 
-                size = size || this.options.pageTextureSize
+                size = 4000 || this.options.pageTextureSize
 
                 if (!self.options.pages[pageIndex]) {
                     callback.call(self)
