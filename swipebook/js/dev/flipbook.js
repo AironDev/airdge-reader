@@ -2041,7 +2041,7 @@ var FLIPBOOK = FLIPBOOK || {};
 
                 if (this.options.pdfMode && !pageSrc) {
 
-                    if(size == 5){
+                    if(size > 5){
                         return;
                     }
                     this.loadPageFromPdf(index, size, callback)
