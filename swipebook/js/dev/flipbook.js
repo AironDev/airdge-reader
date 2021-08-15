@@ -2624,7 +2624,8 @@ var FLIPBOOK = FLIPBOOK || {};
 
                 
                 self.Book.updateVisiblePages()
-                self.Book.zoomTo(o.zoomMin)
+                // airon changed from zoomMin
+                self.Book.zoomTo(o.zoomMax)
 
                 this.updateCurrentPage();
 
@@ -2653,14 +2654,14 @@ var FLIPBOOK = FLIPBOOK || {};
                             self.zoom > 1 ? self.moveBook('up') : self.nextPage();
                             break;
                         case 39:
-                            
+
                             // self.zoom > 1 ? self.moveBook('right') : self.nextPage();
                             break;
                         case 33:
                             self.prevPage()
                             break;
                         case 34:
-                            self.nextPage()
+                            // self.nextPage()
                             break;
                         case 36:
                             self.firstPage()
